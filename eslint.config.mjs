@@ -28,6 +28,7 @@ export default [
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unsafe-function-type': 'off',
       'no-empty': 'off',
       'prefer-const': 'off',
       quotes: ['error', 'single', { allowTemplateLiterals: false }],

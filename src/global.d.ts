@@ -1,7 +1,57 @@
 /// <reference types="vite/client" />
 
-declare namespace LLTemplate_Vite {
-  const greeting: (name: string) => void;
+declare interface ILiteLoaderManifestConfig {
+  manifest_version: 4;
+
+  type?: 'extension' | 'theme' | 'framework';
+
+  name: string;
+
+  slug: string;
+
+  description: string;
+
+  version: string;
+
+  icon?: string | null;
+
+  thumb?: string | null;
+
+  authors: ILiteLoaderManifestAuthorsConfig[];
+
+  dependencies?: string[];
+
+  platform: [
+    'win32'?,
+    'linux'?,
+    'darwin'?,
+  ];
+
+  injects: {
+    main?: string;
+
+    preload?: string;
+
+    renderer?: string;
+  };
+
+  repository?: {
+    repo: string;
+
+    branch: string;
+
+    release?: {
+      tag: string;
+
+      file?: string;
+    }
+  };
+}
+
+declare interface ILiteLoaderManifestAuthorsConfig {
+  name: string;
+
+  link: string;
 }
 
 declare namespace LiteLoader {
@@ -37,7 +87,7 @@ declare namespace LiteLoader {
   }
 
   interface ILiteLoaderPlugin {
-    manifest: object,
+    manifest: ILiteLoaderManifestConfig,
     incompatible: boolean,
     disabled: boolean,
     path: ILiteLoaderPluginPath
@@ -58,13 +108,16 @@ declare namespace LiteLoader {
   interface ILiteLoaderAPI {
     openPath: (path: string) => void,
     openExternal: (url: string) => void,
+    checkUpdate: (slug: string, type?: string) => Promise<boolean | null>,
+    downloadUpdate: (slug: string, url?: string) => Promise<boolean | null>,
+    showRelaunchDialog: (slug: string, showChangeLog?: boolean, changeLogFile?: string) => Promise<void>,
     config: ILiteLoaderAPIConfig,
     plugin: ILiteLoaderAPIPlugin,
   }
 
   interface ILiteLoaderAPIConfig {
     set: <IConfig = unknown>(slug: string, new_config: IConfig) => unknown,
-    get: <IConfig = unknown>(slug: string, default_config?: IConfig) => IConfig,
+    get: <IConfig = unknown>(slug: string, default_config?: IConfig) => IConfig | Promise<IConfig>,
   }
 
   interface ILiteLoaderAPIPlugin {

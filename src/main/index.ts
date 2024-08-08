@@ -1,10 +1,9 @@
-import { ipcMain, BrowserWindow } from 'electron';
+import { app } from 'electron';
 
-ipcMain.on('LLTemplate-Vite.Greeting', (e, name: string) => {
-  console.log('Hello, ' + name + '!');
+const pluginSlug = 'Kemisago';
+
+app.whenReady().then(async () => {
+  if(await LiteLoader.api.checkUpdate(pluginSlug)){
+    if(await LiteLoader.api.downloadUpdate(pluginSlug)) await LiteLoader.api.showRelaunchDialog(pluginSlug, true);
+  }
 });
-
-export const onBrowserWindowCreated = (window: BrowserWindow) => {
-  console.log('A window has just been created');
-  console.log(window);
-};

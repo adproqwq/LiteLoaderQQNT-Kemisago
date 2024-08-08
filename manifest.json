@@ -6,6 +6,8 @@
   "slug": "Kemisago",
   "description": "由 Snoopy1866 开发的text-elementalizer的LiteLoaderQQNT移植版插件",
   "version": "1.0.0",
+  "icon": "./assets/icon.svg",
+  "thumb": "./assets/icon.svg",
   "authors": [
     {
       "name": "Adpro",
@@ -22,11 +24,10 @@
   ],
   "injects": {
     "main": "./main/index.js",
-    "preload": "./preload/index.js",
     "renderer": "./renderer/index.js"
   },
   "repository": {
-    "repo": "adproqwq/LietLoaderQQNT-Kemisago",
+    "repo": "adproqwq/LiteLoaderQQNT-Kemisago",
     "branch": "main",
     "release": {
       "tag": "v1.0.0",

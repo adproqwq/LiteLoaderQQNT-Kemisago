@@ -25,7 +25,7 @@ const ConfigBuilder = (type: 'main' | 'preload') => defineViteConfig({
     viteChecker({
       typescript: true,
       eslint: {
-        lintCommand: 'eslint --fix src/**/* --ext .js,.ts',
+        lintCommand: 'eslint --cache --fix ./src/**/*.{js,cjs,mjs,ts,jsx,tsx}',
       },
     }),
   ],
@@ -50,11 +50,17 @@ export default defineConfig({
       viteChecker({
         typescript: true,
         eslint: {
-          lintCommand: 'eslint --fix src/**/* --ext .js,.ts',
+          lintCommand: 'eslint --cache --fix ./src/**/*.{js,cjs,mjs,ts,jsx,tsx}',
         },
       }),
       viteCp({
-        targets: [{ src: './manifest.json', dest: 'dist' }],
+        targets: [
+          { src: './manifest.json', dest: 'dist' },
+          { src: './assets', dest: 'dist/assets' },
+          { src: './changeLog.md', dest: 'dist' },
+          { src: './src/style', dest: 'dist/style' },
+          { src: './src/pages', dest: 'dist/pages' },
+        ],
       }),
       viteZipPack({
         in: OUTPUT_DIR,
