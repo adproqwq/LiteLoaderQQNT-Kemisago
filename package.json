@@ -1,7 +1,7 @@
 {
-  "name": "lltemplate-vite-pnpm",
+  "name": "ll-kemisago",
   "version": "1.0.0",
-  "description": "A plugin template for LiteLoaderQQNT, powered by Vite & Typescript",
+  "description": "由 Snoopy1866 开发的text-elementalizer的LiteLoaderQQNT移植版插件",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,5 +25,8 @@
     "vite-plugin-checker": "^0.7.2",
     "vite-plugin-cp": "^4.0.8"
   },
-  "packageManager": "pnpm@9.4.0"
+  "packageManager": "pnpm@9.7.0",
+  "dependencies": {
+    "pinyin-pro": "^3.24.2"
+  }
 }

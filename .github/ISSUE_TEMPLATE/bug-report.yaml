@@ -23,7 +23,7 @@ body:
           required: true
         - label: "我已经尝试过删除该插件的配置文件并重启 QQ，问题依旧存在。"
           required: true
-        - label: "我已经在 [Issue Tracker](https://github.com/adproqwq/LiteLoaderQQNT-AutoSendMessages/issues) 中找过我要提出的问题，没有找到相同问题的 ISSUE。"
+        - label: "我已经在 [Issue Tracker](https://github.com/adproqwq/LiteLoaderQQNT-Kemisago/issues) 中找过我要提出的问题，没有找到相同问题的 ISSUE。"
           required: true
 
   - type: markdown

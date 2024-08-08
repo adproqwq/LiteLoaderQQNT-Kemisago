@@ -2,15 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/adproqwq/LiteLoaderQQNT-Manifest-JsonSchema/main/manifest.schema.json",
   "manifest_version": 4,
   "type": "extension",
-  "name": "LLTemplate-Vite",
-  "slug": "LLTemplate-Vite",
-  "description": "A plugin template for LiteLoaderQQNT, powered by Vite & Typescript",
+  "name": "Kemisago",
+  "slug": "Kemisago",
+  "description": "由 Snoopy1866 开发的text-elementalizer的LiteLoaderQQNT移植版插件",
   "version": "1.0.0",
   "authors": [
-    {
-      "name": "MisaLiu",
-      "link": "https://github.com/MisaLiu"
-    },
     {
       "name": "Adpro",
       "link": "https://github.com/adproqwq"
@@ -21,17 +17,20 @@
     "linux",
     "darwin"
   ],
+  "dependencies": [
+    "LiteLoaderQQNT-CheckUpdateModule"
+  ],
   "injects": {
     "main": "./main/index.js",
     "preload": "./preload/index.js",
     "renderer": "./renderer/index.js"
   },
   "repository": {
-    "repo": "adproqwq/LietLoaderQQNT-PluginTemplate-Vite-pnpm",
+    "repo": "adproqwq/LietLoaderQQNT-Kemisago",
     "branch": "main",
     "release": {
-      "tag": "1.0.0",
-      "file": "LLTemplate-Vite.zip"
+      "tag": "v1.0.0",
+      "file": "Kemisago.zip"
     }
   }
 }

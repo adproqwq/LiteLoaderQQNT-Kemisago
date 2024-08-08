@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      pinyin-pro:
+        specifier: ^3.24.2
+        version: 3.24.2
     devDependencies:
       '@electron-toolkit/eslint-config-ts':
         specifier: ^2.0.0
@@ -1214,6 +1218,9 @@ packages:
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  pinyin-pro@3.24.2:
+    resolution: {integrity: sha512-5tPyLhxT4CZ9dWqQRqm3X5ADdS18Sb2w0ranNBgr6jCrqO4O8gtfuyqG7Y6+1Mre+0n2VlhKDz+3P5oqSLrkOw==}
 
   postcss@8.4.41:
     resolution: {integrity: sha512-TesUflQ0WKZqAvg52PWL6kHgLKP6xB6heTOdoYM0Wt2UHyxNa4K25EZZMgKns3BH1RLVbZCREPpLY0rhnNoHVQ==}
@@ -2756,6 +2763,8 @@ snapshots:
   picocolors@1.0.1: {}
 
   picomatch@2.3.1: {}
+
+  pinyin-pro@3.24.2: {}
 
   postcss@8.4.41:
     dependencies:
