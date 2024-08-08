@@ -1,4 +1,4 @@
-import { pinyin } from 'pinyin-pro';
+import { pinyin, customPinyin } from 'pinyin-pro';
 
 // 化学元素
 const elementList = [
@@ -39,6 +39,11 @@ const otherList = [
 ];
 
 const totalList = [...elementList, ...organicList, ...otherList];
+
+// fix https://github.com/Snoopy1866/text-elementalizer/issues/4
+customPinyin({
+  薁: 'ào',
+});
 
 const tonesMap: Map<string, string> = new Map();
 const nontonesMap: Map<string, string> = new Map();
