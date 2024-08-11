@@ -1,5 +1,5 @@
 export const config: IConfig = {
-  ignoreTones: true,
+  ignoreTones: false,
 };
 
 export interface IConfig {
