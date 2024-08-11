@@ -19,7 +19,7 @@
     "@typescript-eslint/parser": "8.0.1",
     "electron": "^31.3.1",
     "electron-vite": "^2.3.0",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "unplugin-zip-pack": "^1.0.2",
     "vite": "^5.4.0",
     "vite-plugin-checker": "^0.7.2",
