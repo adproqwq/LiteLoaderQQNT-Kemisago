@@ -14,7 +14,8 @@ export default async (text: string): Promise<string> => {
       if(excludeList.includes(char)) continue;
 
       if(withoutTonesDict.get(pinyin(char, { toneType: 'none' }))){
-        const chemChar = withoutTonesDict.get(pinyin(char, { toneType: 'none' }))!;
+        const chemCharArray = withoutTonesDict.get(pinyin(char, { toneType: 'none' }))!;
+        const chemChar = chemCharArray[Math.floor(Math.random() * chemCharArray.length)];
         resultArray.push(chemChar);
       }
       else resultArray.push(char);
@@ -25,7 +26,8 @@ export default async (text: string): Promise<string> => {
       if(excludeList.includes(char)) continue;
 
       if(withTonesDict.get(pinyin(char))){
-        const chemChar = withTonesDict.get(pinyin(char))!;
+        const chemCharArray = withTonesDict.get(pinyin(char))!;
+        const chemChar = chemCharArray[Math.floor(Math.random() * chemCharArray.length)];
         resultArray.push(chemChar);
       }
       else resultArray.push(char);

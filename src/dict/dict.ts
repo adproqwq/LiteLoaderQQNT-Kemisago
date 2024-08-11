@@ -45,12 +45,24 @@ customPinyin({
   薁: 'ào',
 });
 
-const tonesMap: Map<string, string> = new Map();
-const nontonesMap: Map<string, string> = new Map();
+const tonesMap: Map<string, string[]> = new Map();
+const nontonesMap: Map<string, string[]> = new Map();
 
 totalList.forEach((char) => {
-  tonesMap.set(pinyin(char), char);
-  nontonesMap.set(pinyin(char, { toneType: 'none' }), char);
+  // fix https://github.com/Snoopy1866/text-elementalizer/issues/7
+  if(tonesMap.has(pinyin(char))){
+    const chemStrArray = tonesMap.get(pinyin(char))!;
+    chemStrArray.push(char);
+    tonesMap.set(pinyin(char), chemStrArray);
+  }
+  else tonesMap.set(pinyin(char), [char]);
+
+  if(nontonesMap.has(pinyin(char, { toneType: 'none' }))){
+    const chemStrArray = nontonesMap.get(pinyin(char, { toneType: 'none' }))!;
+    chemStrArray.push(char);
+    nontonesMap.set(pinyin(char, { toneType: 'none' }), chemStrArray);
+  }
+  else nontonesMap.set(pinyin(char, { toneType: 'none' }), [char]);
 });
 
 export const withTonesDict = tonesMap;
