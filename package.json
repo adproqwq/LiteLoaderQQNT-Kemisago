@@ -1,6 +1,6 @@
 {
   "name": "ll-kemisago",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "由 Snoopy1866 开发的text-elementalizer的LiteLoaderQQNT移植版插件",
   "main": "index.js",
   "scripts": {
