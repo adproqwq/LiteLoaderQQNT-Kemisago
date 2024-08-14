@@ -1,6 +1,6 @@
 import observeElement from '../utils/observeElement';
 import { log } from '../utils/log';
-import convert from '../utils/convert';
+import { convert } from '@adpro/text-elementalizer-core';
 import { config } from '../config/config';
 
 const pluginSlug = 'Kemisago';
@@ -9,7 +9,9 @@ const barIconClick = async () => {
   const text = (document.querySelector('.ck.ck-content.ck-editor__editable p') as HTMLParagraphElement).textContent;
 
   if(text){
-    const result = await convert(text);
+    const userConfig = await LiteLoader.api.config.get(pluginSlug, config);
+
+    const result = await convert(text, userConfig.ignoreTones);
     navigator.clipboard.writeText(result).then(() => {
       new Notification('Kemisago', {
         icon: `${LiteLoader.plugins[pluginSlug].path.plugin}/assets/barIcon.svg`,

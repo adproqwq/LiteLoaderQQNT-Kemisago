@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      pinyin-pro:
-        specifier: ^3.24.2
-        version: 3.24.2
+      '@adpro/text-elementalizer-core':
+        specifier: ^1.0.1
+        version: 1.0.1
     devDependencies:
       '@electron-toolkit/eslint-config-ts':
         specifier: ^2.0.0
@@ -53,6 +53,9 @@ importers:
         version: 4.0.8
 
 packages:
+
+  '@adpro/text-elementalizer-core@1.0.1':
+    resolution: {integrity: sha512-nBXYWTfr+zCO+FNCA/55FJnfZGjPcqAjK5ZM88BKyCTVQMeqz0B8Q5seCOflKkOnPWQe90UMYF/rHUw3KeYGQg==}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -1550,6 +1553,10 @@ packages:
     engines: {node: '>=10'}
 
 snapshots:
+
+  '@adpro/text-elementalizer-core@1.0.1':
+    dependencies:
+      pinyin-pro: 3.24.2
 
   '@ampproject/remapping@2.3.0':
     dependencies:
