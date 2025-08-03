@@ -1,1 +1,1 @@
-1. 使用npm包`@adpro/text-elementalizer-core`完成转换逻辑
+1. 将图标插入至左侧工具栏(#2)
