@@ -28,22 +28,22 @@ const onMessageLoad = async () => {
   const qTooltipsContent = document.createElement('div');
   const icon = document.createElement('i');
   const barIcon = document.createElement('div');
-  
+
   barIcon.classList.add('Kemisago-bar');
   barIcon.appendChild(qTooltips);
-  
+
   qTooltips.classList.add('Kemisago-q-tooltips');
   qTooltips.addEventListener('click', barIconClick);
   qTooltips.appendChild(icon);
   qTooltips.appendChild(qTooltipsContent);
-  
+
   qTooltipsContent.classList.add('Kemisago-q-tooltips__content');
   qTooltipsContent.innerText = 'Kemisago转换';
-  
+
   icon.classList.add('Kemisago-q-icon');
   icon.innerHTML = iconSvg;
 
-  document.querySelector('.chat-func-bar')!.lastElementChild!.appendChild(barIcon);
+  document.querySelector('.chat-func-bar')!.firstElementChild!.appendChild(barIcon);
   log('创建工具栏图标完成');
 };
 
