@@ -1,7 +1,7 @@
 {
   "name": "ll-kemisago",
   "version": "1.0.5",
-  "description": "由 Snoopy1866 开发的text-elementalizer的LiteLoaderQQNT移植版插件",
+  "description": "由 Snoopy1866 开发的 text-elementalizer 的 LiteLoaderQQNT 移植版插件",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,21 +11,20 @@
   "author": "Adpro",
   "license": "GPL-3.0-only",
   "devDependencies": {
-    "@electron-toolkit/eslint-config-ts": "^2.0.0",
+    "@electron-toolkit/eslint-config-ts": "^3.1.0",
     "@electron-toolkit/tsconfig": "^1.0.1",
-    "@types/eslint__eslintrc": "^2.1.2",
-    "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "8.0.1",
-    "@typescript-eslint/parser": "8.0.1",
-    "electron": "^31.3.1",
-    "electron-vite": "^2.3.0",
-    "eslint": "^9.9.0",
-    "unplugin-zip-pack": "^1.0.2",
-    "vite": "^5.4.0",
-    "vite-plugin-checker": "^0.7.2",
-    "vite-plugin-cp": "^4.0.8"
+    "@typescript-eslint/eslint-plugin": "8.38.0",
+    "@typescript-eslint/parser": "8.38.0",
+    "electron": "^37.2.5",
+    "electron-vite": "^4.0.0",
+    "eslint": "^9.32.0",
+    "jiti": "^2.5.1",
+    "unplugin-zip-pack": "^1.0.3",
+    "vite": "^7.0.6",
+    "vite-plugin-checker": "^0.10.2",
+    "vite-plugin-cp": "^6.0.3"
   },
-  "packageManager": "pnpm@9.7.0",
+  "packageManager": "pnpm@10.14.0",
   "dependencies": {
     "@adpro/text-elementalizer-core": "^1.0.1"
   }
